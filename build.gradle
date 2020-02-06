@@ -1,4 +1,13 @@
+plugins {
+  id 'java'
+}
+
 allprojects {
     group = 'be.ordina.jworks'
     version = '0.0.1-SNAPSHOT'
+}
+
+task bootFullApplication(type: GradleBuild) {
+    group 'application'
+    setTasks([':todo-ui:clean', ':todo-ui:buildClientToSpring'])
 }

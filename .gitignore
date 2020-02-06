@@ -1,26 +1,8 @@
-.gradle
-/build/
-!gradle/wrapper/gradle-wrapper.jar
-
-### STS ###
-.apt_generated
+.vscode/*
+todo-api/bin/*
+todo-api/src/main/resources/static/*
 .classpath
-.factorypath
+.gradle/
 .project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-/out/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+.settings/
+todo-ui/.gradle/

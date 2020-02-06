@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from './todo.service';
-import { Todo } from './todo';
+import { HomeServiceService } from './services/home-service.service';
+import { Title } from './model/title';
 
 @Component({
   selector: 'app-root',
@@ -9,51 +10,15 @@ import { Todo } from './todo';
   providers: [TodoService]
 })
 export class AppComponent implements OnInit {
-  todos: Todo[] = [];
-  newTodo: Todo = new Todo();
+  title: Title;
 
-  constructor(private todoService: TodoService) {
+  constructor(private homeService: HomeServiceService) {
 
   }
 
-  ngOnInit(): void {
-    this.todoService
-      .getAllTodos()
-      .subscribe(
-        (todos) => {
-          this.todos = todos;
-        }
-      );
+ async ngOnInit() {
+   this.title = await this.homeService.getTitle().toPromise();
+   console.log(this.title);
   }
 
-  addTodo(todo) {
-    this.todoService
-      .addTodo(todo)
-      .subscribe(
-        (newTodo) => {
-          this.todos = this.todos.concat(newTodo);
-          this.newTodo = new Todo();
-        }
-      );
-  }
-
-  toggleTodoComplete(todo) {
-    this.todoService
-      .toggleTodoComplete(todo)
-      .subscribe(
-        (updatedTodo) => {
-          todo = updatedTodo;
-        }
-      );
-  }
-
-  removeTodo(todo) {
-    this.todoService
-      .deleteTodoById(todo.id)
-      .subscribe(
-        (_) => {
-          this.todos = this.todos.filter((t) => t.id !== todo.id);
-        }
-      );
-  }
 }

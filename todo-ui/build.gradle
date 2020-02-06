@@ -1,6 +1,6 @@
 plugins {
   id 'java'
-  id "com.moowork.node" version "1.2.0"
+  id("com.github.node-gradle.node") version "2.2.0"
 }
 
 node {
@@ -11,6 +11,14 @@ node {
 
 jar.dependsOn 'npm_run_build'
 
-jar {
-  from 'dist/todo-ui' into 'static'
+task buildClientToSpring(type: NpmTask, dependsOn: npm_run_build) {
+    group 'build client'
+    description = 'Compile client side folder for development'
+    args = ['run', 'buildToSpring']
 }
+
+clean.doFirst {
+    group 'build client'
+    delete "${rootDir}/todo-ui/dist", "${rootDir}/todo-api/src/main/resources/static"
+}
+
