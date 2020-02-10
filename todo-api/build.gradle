@@ -32,7 +32,7 @@ dependencies {
 	implementation('javax.xml.bind:jaxb-api:2.3.0')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
     compileOnly("org.springframework.boot:spring-boot-devtools")
-	implementation(project(':todo-ui'))
+	
 }
 
 bootRun {
