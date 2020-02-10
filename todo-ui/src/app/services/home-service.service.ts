@@ -15,4 +15,10 @@ export class HomeServiceService {
             .get<Title>(`/title`)
             .pipe(map((response: Title) => response));
   }
+
+  getCustomers():Observable<Title> {
+    return this.http
+            .get<Title>(`/customers`)
+            .pipe(map((response: Title) => response));
+  }
 }
