@@ -1,9 +1,9 @@
 {
-  "name": "todo-ui",
+  "name": "customer-ui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "buildToSpring": "ng build --prod --outputPath=../todo-api/src/main/resources/static",
+    "buildToSpring": "ng build --prod --outputPath=../customer-api/src/main/resources/static",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
@@ -23,8 +23,6 @@
     "@angular/router": "^7.2.0",
     "core-js": "^2.6.2",
     "rxjs": "~6.3.3",
-    "todomvc-app-css": "^2.1.2",
-    "todomvc-common": "^1.0.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

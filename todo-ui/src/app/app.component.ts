@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from './todo.service';
 import { HomeServiceService } from './services/home-service.service';
 import { Title } from './model/title';
 

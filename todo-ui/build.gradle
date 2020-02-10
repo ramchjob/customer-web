@@ -19,6 +19,6 @@ task buildClientToSpring(type: NpmTask, dependsOn: npm_run_build) {
 
 clean.doFirst {
     group 'build client'
-    delete "${rootDir}/todo-ui/dist", "${rootDir}/todo-api/src/main/resources/static"
+    delete "${rootDir}/customer-ui/dist", "${rootDir}/customer-api/src/main/resources/static"
 }
 
