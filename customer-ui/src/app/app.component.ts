@@ -5,8 +5,7 @@ import { Title } from './model/title';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [TodoService]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title: Title;
