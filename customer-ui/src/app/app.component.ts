@@ -10,14 +10,14 @@ import { Employee } from './model/employee';
 })
 export class AppComponent implements OnInit {
   title: Title;
-  customers: Employee[] = [];
+  employees: Employee[] = [];
 
   constructor(private homeService: HomeServiceService) {
 
   }
 
  async ngOnInit() {
-   this.customers = await this.homeService.getEmployees().toPromise();
+   this.employees = await this.homeService.getEmployees().toPromise();
  }
 
 }

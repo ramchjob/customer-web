@@ -1,20 +1,24 @@
 <html>
     <head>
-        <title></title>
+        <title>Employees</title>
     </head>
 <body>
-    <table>
+  <table class="table table-hover">
+    <thead>
         <tr>
-          <th>Name</th>
-          <th>Age</th>
+            <td>Id</td>
+            <td>First Name</td>
+            <td>Last Name</td>
         </tr>
-        <tr>
-          <td>Finn</td>
-          <td>10</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
         </tr>
-      </table>
-
-
+    </tbody>
+</table> 
 </body>
 
 </html>
