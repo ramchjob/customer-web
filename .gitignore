@@ -6,3 +6,8 @@ todo-api/src/main/resources/static/*
 .project
 .settings/
 todo-ui/.gradle/
+build/libs/todo-0.0.1-SNAPSHOT.jar
+build/tmp/jar/MANIFEST.MF
+todo-ui/package-lock.json
+todo-ui/build/tmp/jar/MANIFEST.MF
+todo-ui/build/libs/todo-ui-0.0.1-SNAPSHOT.jar
