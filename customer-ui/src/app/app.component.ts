@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeServiceService } from './services/home-service.service';
 import { Title } from './model/title';
-import { Customer } from './model/customer';
+import { Employee } from './model/employee';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { Customer } from './model/customer';
 })
 export class AppComponent implements OnInit {
   title: Title;
-  customers: Customer[] = [];
+  customers: Employee[] = [];
 
   constructor(private homeService: HomeServiceService) {
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
  async ngOnInit() {
    this.title = await this.homeService.getTitle().toPromise();
-   this.customers = await this.homeService.getCustomers().toPromise();
+   this.customers = await this.homeService.getEmployees().toPromise();
   }
 
 }

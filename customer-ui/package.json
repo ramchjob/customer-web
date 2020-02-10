@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start-proxy": "node --max-http-header-size=80000 ./node_modules/@angular/cli/bin/ng serve --liveReload=false --proxyConfig=proxy.conf.js"
   },
   "private": true,
   "dependencies": {
