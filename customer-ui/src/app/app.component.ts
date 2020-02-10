@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeServiceService } from './services/home-service.service';
 import { Title } from './model/title';
+import { Customer } from './model/customer';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { Title } from './model/title';
 })
 export class AppComponent implements OnInit {
   title: Title;
+  customers: Customer[] = [];
 
   constructor(private homeService: HomeServiceService) {
 
@@ -16,7 +18,7 @@ export class AppComponent implements OnInit {
 
  async ngOnInit() {
    this.title = await this.homeService.getTitle().toPromise();
-   console.log(this.title);
+   this.customers = await this.homeService.getCustomers().toPromise();
   }
 
 }

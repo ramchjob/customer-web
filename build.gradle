@@ -9,5 +9,5 @@ allprojects {
 
 task bootFullApplication(type: GradleBuild) {
     group 'application'
-    setTasks([':todo-ui:clean', ':todo-ui:buildClientToSpring'])
+    setTasks([':customer-ui:clean', ':customer-ui:buildClientToSpring'])
 }

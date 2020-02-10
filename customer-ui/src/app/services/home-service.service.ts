@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Title } from '../model/title';
+import { Customer } from '../model/customer';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +17,9 @@ export class HomeServiceService {
             .pipe(map((response: Title) => response));
   }
 
-  getCustomers():Observable<Title> {
+  getCustomers():Observable<Customer[]> {
     return this.http
-            .get<Title>(`/customers`)
-            .pipe(map((response: Title) => response));
+            .get<Customer[]>(`/customers`)
+            .pipe(map((response: Customer[]) => response));
   }
 }
