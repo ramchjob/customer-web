@@ -17,8 +17,7 @@ export class AppComponent implements OnInit {
   }
 
  async ngOnInit() {
-   this.title = await this.homeService.getTitle().toPromise();
    this.customers = await this.homeService.getEmployees().toPromise();
-  }
+ }
 
 }

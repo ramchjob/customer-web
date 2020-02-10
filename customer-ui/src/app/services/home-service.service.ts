@@ -10,19 +10,18 @@ import { Employee } from '../model/employee';
 })
 export class HomeServiceService {
   
-  baseUrl: string = 'api'
   constructor(private http: HttpClient) { }
 
 
   getTitle():Observable<Title> {
     return this.http
-            .get<Title>(`${this.baseUrl}/title`)
+            .get<Title>(`/title`)
             .pipe(map((response: Title) => response));
   }
 
   getEmployees():Observable<Employee[]> {
     return this.http
-            .get<Employee[]>(`${this.baseUrl}/employees`)
+            .get<Employee[]>(`/employees`)
             .pipe(map((response: Employee[]) => response));
   }
 }
