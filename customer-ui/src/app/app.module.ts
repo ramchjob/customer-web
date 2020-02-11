@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeServiceService } from './services/home-service.service';
+import { MaterialModule } from './material-module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HomeServiceService } from './services/home-service.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   providers: [HomeServiceService],
   bootstrap: [AppComponent]
