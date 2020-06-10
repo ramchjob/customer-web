@@ -6,3 +6,13 @@ This is simple application to develop spring boot ang angular2+ applications tog
 3. Once changes complete, run gradle clean bootFullApplication build to generate the war file.
 4. Make sure the use above gradle command while building the artifacts in CI/CD tools.
 5. Happy developing.
+
+
+This application consits of angular module and spring boot module.
+
+Technologies used:
+
+* Angular 7
+* Spring boot
+* Kafka
+* Gradle
